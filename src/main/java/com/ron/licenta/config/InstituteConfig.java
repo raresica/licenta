@@ -16,6 +16,16 @@ public class InstituteConfig {
                           "Scoala 27",
                           "0236754389",
                           "scoala27@gmail.com"
+                  ),
+                  new Institute(
+                          "Scoala 22",
+                          "02316754389",
+                          "scoala22@gmail.com"
+                  ),
+                  new Institute(
+                          "Scoala 1",
+                          "0219314124",
+                          "scoala1@gmail.com"
                   )
           ));
     }

@@ -15,7 +15,8 @@ public class YearConfig {
 
             yearRepository.saveAll(List.of(
                     new Year("2021-2022"),
-                    new Year("2020-2021")
+                    new Year("2020-2021"),
+                    new Year("2019-2020")
             ));
 
     }

@@ -28,6 +28,7 @@ public class SchoolYearController {
         return schoolYearService.getAll();
     }
 
+
     @GetMapping("{idSchool}/{idYear}/{idLevel}/{idTeacher}")
     @Transactional
     public List<TeacherSubjectDTO> getSubjects(@PathVariable("idSchool") Integer idSchool, @PathVariable("idYear") Integer idYear, @PathVariable("idLevel") Integer idLevel,
@@ -36,3 +37,4 @@ public class SchoolYearController {
                 .getSubjectsFromTeacherInLevelInYearInSchool(idSchool, idYear, idLevel, idTeacher);
     }
 }
+

@@ -67,16 +67,53 @@ public class DatabaseConfig {
                                       SchoolYearRepository schoolYearRepository, LevelOfEducationRepository levelOfEducationRepository,
                                       TeacherRepository teacherRepository, SubjectRepository subjectRepository) throws Exception {
         Institute institute = instituteRepository.findById(1).get();
+        Institute institute1 = instituteRepository.findById(2).get();
         SchoolYears schoolYears = new SchoolYears();
         schoolYears.setInstitute(institute);
 
-        Year year = yearRepository.findById(1).orElseThrow(()-> new Exception("Can't find the year"));
-        Year year2 = yearRepository.findById(2).orElseThrow(()-> new Exception("Can't find the year"));
 
-        schoolYears.setYearLevels(List.of(getYearLevel2021_2022(year, levelOfEducationRepository, teacherRepository, subjectRepository)));
+        Year year = yearRepository.findById(1).orElseThrow(()-> new Exception("Can't find the year"));//2021-2022
+        Year year2 = yearRepository.findById(2).orElseThrow(()-> new Exception("Can't find the year"));//2020-2021
+
+        schoolYears.setYearLevels(List.of(getYearLevel2021_2022(year, levelOfEducationRepository, teacherRepository, subjectRepository),
+                                        (getYearLevel2020_2021(year2, levelOfEducationRepository, teacherRepository, subjectRepository))));
         schoolYearRepository.saveAll(List.of(schoolYears));
         System.out.println(schoolYears);
     }
+
+
+    private YearLevels getYearLevel2020_2021(Year year2, LevelOfEducationRepository levelOfEducationRepository, TeacherRepository teacherRepository,
+                                             SubjectRepository subjectRepository){
+        YearLevels yearLevels = new YearLevels();
+        yearLevels.setYear(year2);
+        yearLevels.setLevelTeachers(List.of(
+                getLevelTeachers2020_2021Primar(levelOfEducationRepository, teacherRepository, subjectRepository)));
+//                getLevelTeachers2020_2021Gimnazial(levelOfEducationRepository),
+//                getLevelTeachers2020_2021Liceal(levelOfEducationRepository)));
+
+        return yearLevels;
+    }
+    private LevelTeachers getLevelTeachers2020_2021Primar(LevelOfEducationRepository levelOfEducationRepository,
+                                                          TeacherRepository teacherRepository,
+                                                          SubjectRepository subjectRepository){
+        LevelTeachers levelTeachers = new LevelTeachers();
+        LevelOfEducation levelOfEducation = levelOfEducationRepository.findById(2).get();
+        levelTeachers.setLevelOfEducation(levelOfEducation);
+        levelTeachers.setTeacherSubjects(List.of(getTeacherSubject2020_2021Primar(2, teacherRepository, subjectRepository),
+                getTeacherSubject2021_2022Primar(3, teacherRepository, subjectRepository),
+                getTeacherSubject2021_2022Primar(4, teacherRepository, subjectRepository)));
+        return levelTeachers;
+    }
+    private TeacherSubjects getTeacherSubject2020_2021Primar(int id, TeacherRepository teacherRepository, SubjectRepository subjectRepository){
+        TeacherSubjects teacherSubjects = new TeacherSubjects();
+        teacherSubjects.setTeacher(teacherRepository.findById(id).get());
+        teacherSubjects.setSubjectInfos(List.of(
+                new SubjectInfo(subjectRepository.findById(5).get(), 15),
+                new SubjectInfo(subjectRepository.findById(6).get(), 12)
+        ));
+        return teacherSubjects;
+    }
+
 
     private YearLevels getYearLevel2021_2022(Year year, LevelOfEducationRepository levelOfEducationRepository, TeacherRepository teacherRepository,
                                              SubjectRepository subjectRepository){

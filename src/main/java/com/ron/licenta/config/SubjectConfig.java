@@ -17,7 +17,16 @@ public class SubjectConfig {
             subjectRepository.saveAll(List.of(
                     new Subject("Matematica"),
                     new Subject("Limba si literatura Romana"),
-                    new Subject("Fizica")
+                    new Subject("Fizica"),
+                    new Subject("Chimie"),
+                    new Subject("Istorie"),
+                    new Subject("Geografie"),
+                    new Subject("Economie"),
+                    new Subject("Religie"),
+                    new Subject("Educatie fizica"),
+                    new Subject("TIC"),
+                    new Subject("Biologie"),
+                    new Subject("Educatie muzicala")
                     )
             );
     }

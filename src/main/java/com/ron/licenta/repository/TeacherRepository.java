@@ -15,5 +15,9 @@ public interface TeacherRepository extends CrudRepository<Teacher, Integer> {
     String[] getAllTeachersByYear(Integer idYear);
 
     @Procedure
-    String[] getAllTeachersByInstitute(Integer idSchool);
+    String[] getAllTeachersByInstitute(Integer idYear, Integer idSchool);
+
+    @Procedure
+    String[] getTeacherById(Integer idTeacher);
+
 }

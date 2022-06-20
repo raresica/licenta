@@ -25,6 +25,7 @@ public class TeacherController {
 
     @Autowired
     public TeacherController(TeacherService teacherService) {
+
         this.teacherService = teacherService;
     }
 
@@ -40,11 +41,17 @@ public class TeacherController {
         return teacherService.getAllTeachersByYear(idYear);
     }
 
-    @GetMapping("/by-school/{idSchool}")
+    @GetMapping("{idYear}/by-school/{idSchool}")
     @Transactional
-    public List<TeacherDTO> getTeachersByInstitute(@PathVariable("idSchool") Integer idSchool) {
-        return teacherService.getAllTeachersByInstitute(idSchool);
+    public List<TeacherDTO> getTeachersByInstitute(@PathVariable("idYear") Integer idYear,
+                                                   @PathVariable("idSchool") Integer idSchool) {
+        return teacherService.getAllTeachersByInstitute(idYear, idSchool);
     }
 
+    @GetMapping("{idTeacher}")
+    @Transactional
+    public List<TeacherDTO> getTeacherById(@PathVariable("idTeacher") Integer idTeacher) {
+        return teacherService.getTeacherById(idTeacher);
 
+    }
 }

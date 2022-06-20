@@ -11,4 +11,7 @@ public interface InstituteRepository extends CrudRepository<Institute, Integer> 
     String[] getAllInstitutes();
     @Procedure
     String[] getInstituteByYear(Integer idYear);
+
+    @Procedure
+    String[] getInstituteByTeacher(Integer idTeacher);
 }

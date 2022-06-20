@@ -32,8 +32,14 @@ public class InstituteController {
 
     @GetMapping("{idYear}")
     @Transactional
-    public List<InstituteDTO> getInstituteById(@PathVariable("idYear") Integer idYear) {
+    public List<InstituteDTO> getInstituteByYear(@PathVariable("idYear") Integer idYear) {
         return instituteService.getInstituteByYear(idYear);
+    }
+
+    @GetMapping("Teacher_id/{idTeacher}")
+    @Transactional
+    public List<InstituteTeacherDTO> getInstituteByTeacher(@PathVariable("idTeacher") Integer idTeacher) {
+        return instituteService.getInstituteByTeacher(idTeacher);
     }
 }
 

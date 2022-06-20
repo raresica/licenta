@@ -12,4 +12,7 @@ public interface LevelOfEducationRepository extends CrudRepository<LevelOfEducat
     String[] getAll();
     @Procedure
     String[] getLevelOfEducation(Integer idLevel);
+
+    @Procedure
+    String[] getLevelOfEducationByYear(Integer idYear);
 }

@@ -1,6 +1,7 @@
 package com.ron.licenta.service;
 
 import com.ron.licenta.model.LevelOfEducationDTO;
+import com.ron.licenta.model.LevelOfEducationYearDTO;
 import com.ron.licenta.repository.LevelOfEducationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,5 +47,16 @@ public class LevelOfEducationService {
         return levelOfEducationDTOS;
     }
 
+    public List<LevelOfEducationYearDTO> getLevelOfEducationByYear(Integer idYear) {
+        String[] resultSet = levelOfEducationRepository
+                .getLevelOfEducationByYear(idYear);
+        List<LevelOfEducationYearDTO> levelOfEducationYearDTOS = new ArrayList<>();
+        Arrays.stream(resultSet).forEach(s -> {
+            String[] tokens = s.split(",");
+            LevelOfEducationYearDTO levelOfEducationYearDTO = new LevelOfEducationYearDTO(tokens[0],tokens[1],tokens[2]);
+            levelOfEducationYearDTOS.add(levelOfEducationYearDTO);
+        });
+        return levelOfEducationYearDTOS;
+    }
 
 }

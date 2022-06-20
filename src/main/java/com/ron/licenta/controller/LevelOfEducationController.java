@@ -35,4 +35,10 @@ public class LevelOfEducationController {
     public List<LevelOfEducationDTO> getLevelOfEducation(@PathVariable("idLevel") Integer idLevel) {
         return levelOfEducationService.getLevelOfEducation(idLevel);
     }
+
+    @GetMapping("Year/{idYear}")
+    @Transactional
+    public List<LevelOfEducationYearDTO> getLevelOfEducationByYear(@PathVariable("idYear") Integer idYear) {
+        return levelOfEducationService.getLevelOfEducationByYear(idYear);
+    }
 }

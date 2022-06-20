@@ -35,7 +35,7 @@ public class TeacherController {
         return teacherService.getAllTeachers();
     }
 
-    @GetMapping("{idYear}")
+    @GetMapping("year/{idYear}")
     @Transactional
     public List<TeacherDTO> getTeachers(@PathVariable("idYear") Integer idYear) {
         return teacherService.getAllTeachersByYear(idYear);
@@ -48,7 +48,7 @@ public class TeacherController {
         return teacherService.getAllTeachersByInstitute(idYear, idSchool);
     }
 
-    @GetMapping("{idTeacher}")
+    @GetMapping("teacher/{idTeacher}")
     @Transactional
     public List<TeacherDTO> getTeacherById(@PathVariable("idTeacher") Integer idTeacher) {
         return teacherService.getTeacherById(idTeacher);

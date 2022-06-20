@@ -11,7 +11,7 @@ import java.util.List;
 
 public class TeacherConfig {
 
-    static void commandLineRunnerTeacher(TeacherRepository teacherRepository){
+    static void commandLineRunnerTeacher(TeacherRepository teacherRepository){ //10
          teacherRepository.saveAll(List.of(
                     new Teacher(
                             "Dragomir",
@@ -33,15 +33,15 @@ public class TeacherConfig {
                          "Numescu",
                          "19522141254512",
                          "0731338220",
-                         "raresonescu@prof.com"
+                         "PrenumelNumescu@prof.com"
                  )
                  ,
                  new Teacher(
-                         "Cutarel",
-                         "Cutare",
+                         "Nimeni",
+                         "Oarecare",
                          "11542141253512",
                          "0731338220",
-                         "raresonescu@prof.com"
+                         "nimeniOarecare@prof.com"
                  )
                  ,
                  new Teacher(
@@ -49,7 +49,7 @@ public class TeacherConfig {
                          "Delia",
                          "19542641251512",
                          "0731338220",
-                         "raresonescu@prof.com"
+                         "mileaDelia@prof.com"
                  ),
                  new Teacher(
                          "Monescu",
@@ -78,6 +78,13 @@ public class TeacherConfig {
                          "9213215125",
                          "0732141111",
                          "ignatFlorin@prof.com"
+                 ),
+                 new Teacher(
+                         "Iuca",
+                         "Maria",
+                         "2354125326234",
+                         "073533333333",
+                         "iucaMaria@prof.com"
                  )
             ));
     }

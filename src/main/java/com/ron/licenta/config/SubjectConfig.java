@@ -26,7 +26,7 @@ public class SubjectConfig {
                     new Subject("Educatie fizica"),
                     new Subject("TIC"),
                     new Subject("Biologie"),
-                    new Subject("Educatie muzicala")
+                    new Subject("Educatie muzicala")//12
                     )
             );
     }

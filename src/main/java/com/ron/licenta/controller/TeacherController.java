@@ -1,6 +1,7 @@
 package com.ron.licenta.controller;
 
 import com.ron.licenta.model.SchoolYears;
+import com.ron.licenta.model.TeacherAllDTO;
 import com.ron.licenta.model.TeacherDTO;
 import com.ron.licenta.model.TeacherSubjectDTO;
 import com.ron.licenta.service.SchoolYearService;
@@ -37,13 +38,13 @@ public class TeacherController {
 
     @GetMapping("year/{idYear}")
     @Transactional
-    public List<TeacherDTO> getTeachers(@PathVariable("idYear") Integer idYear) {
+    public List<TeacherAllDTO> getTeachers(@PathVariable("idYear") Integer idYear) {
         return teacherService.getAllTeachersByYear(idYear);
     }
 
-    @GetMapping("{idYear}/by-school/{idSchool}")
+    @GetMapping("year/{idYear}/by-school/{idSchool}")
     @Transactional
-    public List<TeacherDTO> getTeachersByInstitute(@PathVariable("idYear") Integer idYear,
+    public List<TeacherAllDTO> getTeachersByInstitute(@PathVariable("idYear") Integer idYear,
                                                    @PathVariable("idSchool") Integer idSchool) {
         return teacherService.getAllTeachersByInstitute(idYear, idSchool);
     }

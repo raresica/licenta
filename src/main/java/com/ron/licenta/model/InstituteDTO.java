@@ -12,5 +12,6 @@ public class InstituteDTO {
     private String name;
     private String telephoneNumber;
     private String emailAddress;
+    private String id;
 
 }

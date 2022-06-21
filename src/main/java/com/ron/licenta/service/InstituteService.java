@@ -27,7 +27,7 @@ public class InstituteService {
         List<InstituteDTO> instituteDTOS = new ArrayList<>();
         Arrays.stream(resultSet).forEach(s -> {
             String[] tokens = s.split(",");
-            InstituteDTO instituteDTO = new InstituteDTO(tokens[0], tokens[1], tokens[2]);
+            InstituteDTO instituteDTO = new InstituteDTO(tokens[0], tokens[1], tokens[2], tokens[3]);
             instituteDTOS.add(instituteDTO);
         });
         return instituteDTOS;
@@ -39,7 +39,7 @@ public class InstituteService {
         List<InstituteDTO> instituteDTOS = new ArrayList<>();
         Arrays.stream(resultSet).forEach(s -> {
             String[] tokens = s.split(",");
-            InstituteDTO instituteDTO = new InstituteDTO(tokens[0], tokens[1], tokens[2]);
+            InstituteDTO instituteDTO = new InstituteDTO(tokens[0], tokens[1], tokens[2], tokens[3]);
             instituteDTOS.add(instituteDTO);
 
         });

@@ -30,7 +30,7 @@ public class InstituteController {
 
     }
 
-    @GetMapping("{idYear}")
+    @GetMapping("year/{idYear}")
     @Transactional
     public List<InstituteDTO> getInstituteByYear(@PathVariable("idYear") Integer idYear) {
         return instituteService.getInstituteByYear(idYear);

@@ -1,5 +1,6 @@
 package com.ron.licenta.service;
 
+import com.ron.licenta.model.TeacherAllDTO;
 import com.ron.licenta.model.TeacherDTO;
 import com.ron.licenta.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,32 +31,32 @@ import java.util.List;
             return teacherDTOS;
         }
 
-        public List<TeacherDTO> getAllTeachersByYear(Integer idYear) {
+        public List<TeacherAllDTO> getAllTeachersByYear(Integer idYear) {
             String[] resultSet = teacherRepository
                     .getAllTeachersByYear(idYear);
-            List<TeacherDTO> teacherDTOS = new ArrayList<>();
+            List<TeacherAllDTO> teacherAllDTOS = new ArrayList<>();
             Arrays.stream(resultSet).forEach(s -> {
                 String[] tokens = s.split(",");
-                TeacherDTO teacherDTO = new TeacherDTO(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
+                TeacherAllDTO teacherAllDTO = new TeacherAllDTO(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4], tokens[5]);
 
-                teacherDTOS.add(teacherDTO);
+                teacherAllDTOS.add(teacherAllDTO);
 
             });
 
-            return teacherDTOS;
+            return teacherAllDTOS;
         }
 
-        public List<TeacherDTO> getAllTeachersByInstitute(Integer idYear, Integer idSchool) {
+        public List<TeacherAllDTO> getAllTeachersByInstitute(Integer idYear, Integer idSchool) {
             String[] resultSet = teacherRepository
                     .getAllTeachersByInstitute(idYear, idSchool);
-            List<TeacherDTO> teacherDTOS = new ArrayList<>();
+            List<TeacherAllDTO> teacherAllDTOS = new ArrayList<>();
             Arrays.stream(resultSet).forEach(s -> {
                 String[] tokens = s.split(",");
-                TeacherDTO teacherDTO = new TeacherDTO(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4]);
+                TeacherAllDTO teacherAllDTO = new TeacherAllDTO(tokens[0], tokens[1], tokens[2], tokens[3], tokens[4],tokens[5]);
 
-                teacherDTOS.add(teacherDTO);
+                teacherAllDTOS.add(teacherAllDTO);
             });
-            return teacherDTOS;
+            return teacherAllDTOS;
 
         }
 

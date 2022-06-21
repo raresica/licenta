@@ -442,7 +442,6 @@ public class DatabaseConfig {
         LevelOfEducation levelOfEducation = levelOfEducationRepository.findById(1).get();
         levelTeachers.setLevelOfEducation(levelOfEducation);
         levelTeachers.setTeacherSubjects(List.of(
-                getTeacherSubject2021_2022Primar_22(6, teacherRepository, subjectRepository, 9, 2, 4, 8),
                 getTeacherSubject2021_2022Primar_22(7, teacherRepository, subjectRepository, 3, 2),
                 getTeacherSubject2021_2022Primar_22(9, teacherRepository, subjectRepository, 2, 5),
                 getTeacherSubject2021_2022Primar_22(2, teacherRepository, subjectRepository, 2, 6),
@@ -468,7 +467,6 @@ public class DatabaseConfig {
         LevelOfEducation levelOfEducation = levelOfEducationRepository.findById(1).get();
         levelTeachers.setLevelOfEducation(levelOfEducation);
         levelTeachers.setTeacherSubjects(List.of(
-                getTeacherSubject2020_2021Primar_22(6, teacherRepository, subjectRepository, 9, 2, 11, 3),
                 getTeacherSubject2020_2021Primar_22(7, teacherRepository, subjectRepository, 1, 2),
                 getTeacherSubject2020_2021Primar_22(9, teacherRepository, subjectRepository, 3, 5),
                 getTeacherSubject2020_2021Primar_22(2, teacherRepository, subjectRepository, 4, 6),
@@ -494,7 +492,7 @@ public class DatabaseConfig {
         LevelOfEducation levelOfEducation = levelOfEducationRepository.findById(1).get();
         levelTeachers.setLevelOfEducation(levelOfEducation);
         levelTeachers.setTeacherSubjects(List.of(
-                getTeacherSubject2019_2020Primar_22(6, teacherRepository, subjectRepository, 9, 2, 4, 8),
+                getTeacherSubject2019_2020Primar_22(2, teacherRepository, subjectRepository, 9, 2, 4, 8),
                 getTeacherSubject2019_2020Primar_22(8, teacherRepository, subjectRepository, 10, 1)));
         return levelTeachers;
     }

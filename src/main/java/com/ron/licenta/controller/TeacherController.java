@@ -1,10 +1,7 @@
 package com.ron.licenta.controller;
 
-import com.ron.licenta.model.SchoolYears;
 import com.ron.licenta.model.TeacherAllDTO;
 import com.ron.licenta.model.TeacherDTO;
-import com.ron.licenta.model.TeacherSubjectDTO;
-import com.ron.licenta.service.SchoolYearService;
 import com.ron.licenta.service.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;

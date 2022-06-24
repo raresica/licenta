@@ -2,9 +2,6 @@ package com.ron.licenta.config;
 
 import com.ron.licenta.model.Subject;
 import com.ron.licenta.repository.SubjectRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
@@ -26,7 +23,7 @@ public class SubjectConfig {
                     new Subject("Educatie fizica"),
                     new Subject("TIC"),
                     new Subject("Biologie"),
-                    new Subject("Educatie muzicala")//12
+                    new Subject("Educatie muzicala")
                     )
             );
     }

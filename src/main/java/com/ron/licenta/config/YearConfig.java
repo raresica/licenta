@@ -2,9 +2,6 @@ package com.ron.licenta.config;
 
 import com.ron.licenta.model.Year;
 import com.ron.licenta.repository.YearRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 

@@ -50,7 +50,7 @@ public class DatabaseConfig {
                 getYearLevel2020_2021_27(year2, levelOfEducationRepository, teacherRepository, subjectRepository),
                 getYearLevel2019_2020_27(year3, levelOfEducationRepository, teacherRepository, subjectRepository)));
         schoolYearRepository.saveAll(List.of(schoolYears));
-        System.out.println(schoolYears);
+
     }
 
     private void insertDataIntoSchool22(InstituteRepository instituteRepository, YearRepository yearRepository,
@@ -70,7 +70,7 @@ public class DatabaseConfig {
                 getYearLevel2020_2021_22(year2, levelOfEducationRepository, teacherRepository, subjectRepository),
                 getYearLevel2019_2020_22(year3, levelOfEducationRepository, teacherRepository, subjectRepository)));
         schoolYearRepository.saveAll(List.of(schoolYears));
-        System.out.println(schoolYears);
+
     }
 
     private void insertDataIntoSchool1(InstituteRepository instituteRepository, YearRepository yearRepository,

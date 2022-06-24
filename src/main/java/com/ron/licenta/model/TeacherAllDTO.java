@@ -13,5 +13,4 @@ public class TeacherAllDTO {
     private String telephoneNo;
     private String emailAddress;
     private String idTeacher;
-
 }

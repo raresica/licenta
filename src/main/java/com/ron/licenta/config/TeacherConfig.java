@@ -2,9 +2,6 @@ package com.ron.licenta.config;
 
 import com.ron.licenta.model.Teacher;
 import com.ron.licenta.repository.TeacherRepository;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 
@@ -16,66 +13,66 @@ public class TeacherConfig {
                     new Teacher(
                             "Dragomir",
                             "Elena",
-                            "1234565324234",
+                            "2134567890123",
                             "0988765542",
-                            "Dragomir.Elena@prof.com"
+                            "DragomirElena@prof.com"
                     ),
                     new Teacher(
                             "Onescu",
                             "Rares",
-                            "19542141251512",
+                            "1134539000123",
                             "0731338220",
-                            "raresonescu@prof.com"
+                            "raresOnescu@prof.com"
                     )
                  ,
                  new Teacher(
-                         "Prenumel",
-                         "Numescu",
-                         "19522141254512",
-                         "0731338220",
-                         "PrenumelNumescu@prof.com"
+                         "Codrin",
+                         "Chririla",
+                         "1952214125451",
+                         "0733338222",
+                         "codrinChirila@prof.com"
                  )
                  ,
                  new Teacher(
-                         "Nimeni",
-                         "Oarecare",
-                         "11542141253512",
-                         "0731338220",
-                         "nimeniOarecare@prof.com"
+                         "Catalin",
+                         "Bunescu",
+                         "1154214125351",
+                         "0722338222",
+                         "catalinBunescu@prof.com"
                  )
                  ,
                  new Teacher(
-                         "Minea",
-                         "Delia",
-                         "19542641251512",
-                         "0731338220",
-                         "mileaDelia@prof.com"
+                         "Mierea",
+                         "Adelina",
+                         "2954264125151",
+                         "0722033311",
+                         "adelinaMierea@prof.com"
                  ),
                  new Teacher(
                          "Monescu",
                          "Vlad",
-                         "12345135124312",
+                         "123451351243",
                          "0732141244",
                          "monescuVlad@prof.com"
                  ),
                  new Teacher(
                          "Cosmin",
                          "Marian",
-                         "123451232112",
+                         "1123451232112",
                          "0763311244",
                          "cosminMarian@prof.com"
                  ),
                  new Teacher(
                          "Constantin",
                          "Daniel",
-                         "312412412321",
-                         "02353141244",
+                         "1312412412321",
+                         "0235314124",
                          "constantinDaniel@prof.com"
                  ),
                  new Teacher(
                          "Ignat",
                          "Florin",
-                         "9213215125",
+                         "1959213215125",
                          "0732141111",
                          "ignatFlorin@prof.com"
                  ),
@@ -83,7 +80,7 @@ public class TeacherConfig {
                          "Iuca",
                          "Maria",
                          "2354125326234",
-                         "073533333333",
+                         "0735333333",
                          "iucaMaria@prof.com"
                  )
             ));
